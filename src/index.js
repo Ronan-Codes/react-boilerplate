@@ -1,19 +1,21 @@
-import React from 'react-dom/client';
+import React from 'react';
 import ReactDom from 'react-dom';
-import Button from './components/Button'
 
-class HelloWorld extends React.Component {
+
+class HelloMessage extends React.Component {
     render() {
-        return (
-            <>
-                <div>Hello World, my name is {this.props.name}!</div>
-                <Button/>
-            </>
-        )
+      return (
+        <>
+          <div>Hello World, my name is {this.props.name}</div>
+          <Button />
+        </>
+      );
     }
-}
+  }
 
 ReactDom.render(
-    <HelloWorld name="Ronan"/>,
+    <HelloMessage name="Ronan"/>,
     document.getElementById('hello-example')
 )
+
+const Ronan = { name: 'Ronan' };
