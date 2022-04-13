@@ -1,21 +1,17 @@
 import React from 'react';
-import ReactDom from 'react-dom';
+import ReactDOM from 'react-dom';
 
+import './style.scss';
 
-class HelloMessage extends React.Component {
-    render() {
-      return (
-        <>
-          <div>Hello World, my name is {this.props.name}</div>
-          <Button />
-        </>
-      );
-    }
-  }
+import App from './App';
+// class HelloMessage extends React.Component {
+//   render() {
+//     return (
+//       <>
+//       <App/>
+//       </>
+//     );
+//   }
+// }
 
-ReactDom.render(
-    <HelloMessage name="Ronan"/>,
-    document.getElementById('hello-example')
-)
-
-const Ronan = { name: 'Ronan' };
+ReactDOM.render(<App name="Ronan" />, document.getElementById('root'));
